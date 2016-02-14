@@ -5,7 +5,8 @@ class String
     green: 32,
     yellow: 33,
     blue: 34,
-    # People in the know tell me that magenta is pretty much the same as pink...
+    # 35 is the code for magenta. People in the know tell me that magenta is
+    # pretty much the same as pink...
     pink: 35,
     light_blue: 94,
     white: 97,
