@@ -5,7 +5,7 @@ class String
     green: 32,
     yellow: 33,
     blue: 34,
-    pink: 35, # TODO: This is magenta...
+    pink: 35, # TODO: Is magenta pink?
     light_blue: 94,
     white: 97,
     light_grey: 37,
@@ -18,6 +18,14 @@ class String
         puts "\e[#{code}m#{self}\e[0m"
       end
     end
+  end
+
+  def self.colors
+    color_array = []
+    @colors.each_key do |color|
+      color_array.push(color)
+    end
+    color_array
   end
 end
 
