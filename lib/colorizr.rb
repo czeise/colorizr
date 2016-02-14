@@ -15,7 +15,7 @@ class String
   def self.create_colors
     @colors.each do |color, code|
       send(:define_method, "#{color}") do
-        puts "\e[#{code}m#{self}\e[0m"
+        "\e[#{code}m#{self}\e[0m"
       end
     end
   end
@@ -26,6 +26,12 @@ class String
       color_array.push(color)
     end
     color_array
+  end
+
+  def self.sample_colors
+    @colors.each_key do |color|
+      puts 'This is ' + "#{color}".send(color)
+    end
   end
 end
 
