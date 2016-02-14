@@ -1,8 +1,6 @@
 # Re-opening the string class to add the Colorizr methods
 class String
-  @colors = %w(red green yellow blue pink light_blue white light_grey black)
-
-  @colors_hash = {
+  @colors = {
     red: 31,
     green: 32,
     yellow: 33,
@@ -15,10 +13,9 @@ class String
   }
 
   def self.create_colors
-    @colors.each do |color|
-      puts "#{color}"
+    @colors.each do |color, code|
       send(:define_method, "#{color}") do
-        puts "#{color}"
+        puts "\e[#{code}m#{self}\e[0m"
       end
     end
   end
