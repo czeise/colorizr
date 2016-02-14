@@ -5,7 +5,8 @@ class String
     green: 32,
     yellow: 33,
     blue: 34,
-    pink: 35, # TODO: Is magenta pink?
+    # People in the know tell me that magenta is pretty much the same as pink...
+    pink: 35,
     light_blue: 94,
     white: 97,
     light_grey: 37,
@@ -21,11 +22,7 @@ class String
   end
 
   def self.colors
-    color_array = []
-    @colors.each_key do |color|
-      color_array.push(color)
-    end
-    color_array
+    @colors.keys
   end
 
   def self.sample_colors
