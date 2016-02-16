@@ -1,0 +1,11 @@
+Descriptions
+	* How does your gem take advantage of Ruby’s metaprogramming capabilities?
+		My `create_colors` method takes a hash of all of the colors and their corresponding codes and converts them to Ruby methods using `define_method`. Also by re-opening the `String` class, I was able to add the `create_colors` method along with `colors`, and `sample_colors` to a modified version of itself.
+
+Reflections
+	* How long did you spend working on this project?
+		A couple days. 1 pretty long day to get through the lessons and work through the majority of the project, and a few more hours the next day to wrap everything up. I'm on my third day now and I've been working on the README and now reflections.
+	* What was the most rewarding challenge you conquered?
+		Figuring out how to properly use `define_method` was an iterative process for me. I started with a pretty simple version of what I eventually ended up with and then built it into my current version of the create_colors method. It was very cool to find that the way I _thought_ it should work and the way it actually does work were very similar.
+	* Where do you still have room to grow?
+		The metaprogramming concepts that I used in this project were the ones that came a bit easier to me. It's difficult for me to envision where I'd be using some of the other concepts brought up late in the metaprogramming lesson. I'll need to get some practice in on those to help solidify my understanding.
