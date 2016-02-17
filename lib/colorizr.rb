@@ -1,6 +1,6 @@
 # Re-opening the string class to add the Colorizr methods
 class String
-  @colors = {
+  COLORS = {
     red: 31,
     green: 32,
     yellow: 33,
@@ -15,7 +15,7 @@ class String
   }
 
   def self.create_colors
-    @colors.each do |color, code|
+    COLORS.each do |color, code|
       send(:define_method, "#{color}") do
         "\e[#{code}m#{self}\e[0m"
       end
@@ -23,11 +23,11 @@ class String
   end
 
   def self.colors
-    @colors.keys
+    COLORS.keys
   end
 
   def self.sample_colors
-    @colors.each_key do |color|
+    COLORS.each_key do |color|
       puts 'This is ' + "#{color}".send(color)
     end
   end
